@@ -19,7 +19,7 @@ urlpatterns = [
 
     path('cubcategory/' , SubcategoryListViewSet.as_view() , name = 'subcategory'),
     path('cubcategory/<int:pk>/', SubcategoryDetailViewSet.as_view(), name='subcategory_detail'),
-    path('cubcategory/<int:pk>/create/', SubcategoryCreateViewSet.as_view(), name='subcategory'),
+    path('cubcategory/create/', SubcategoryCreateViewSet.as_view(), name='subcategory'),
     path('cubcategory/<int:pk>/edit/', SubcategoryEditViewSet.as_view(), name='subcategory_detail'),
 
     path('review/', ReviewsListViewSet.as_view(), name='reviews'),

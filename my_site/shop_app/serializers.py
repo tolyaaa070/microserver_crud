@@ -6,8 +6,13 @@ class CategorySerializers(serializers.ModelSerializer):
         model = Category
         fields = ['category_image' , 'category_name']
 
+class CategoryS(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['category_name']
+
 class SubCategorySerializers(serializers.ModelSerializer):
-    category = CategorySerializers(read_only=True , many= True)
+    category = CategorySerializers(write_only=True)
     class Meta:
         model = Subcategory
         fields = ['category' , 'subcat_name']

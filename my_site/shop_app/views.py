@@ -44,7 +44,7 @@ class SubcategoryEditViewSet(generics.RetrieveUpdateDestroyAPIView):
     queryset = Subcategory.objects.all()
     serializer_class = SubCategorySerializers
 
-class SubcategoryCreateViewSet(generics.ListCreateAPIView):
+class SubcategoryCreateViewSet(generics.CreateAPIView):
     queryset = Subcategory.objects.all()
     serializer_class = SubCategorySerializers
 
